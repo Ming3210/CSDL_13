@@ -35,7 +35,7 @@ begin
     from courses
     where course_name = p_course_name;
 
-    select count(*) into v_enrollment_exists
+    select count(enrollment_id) into v_enrollment_exists
     from enrollments
     where student_id = v_student_id and course_id = v_course_id;
 
